@@ -1,0 +1,41 @@
+<!doctype html>
+<htmllang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Displaying MongoDB data </title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+    table, th, td {
+        border: 3px solid gray;
+    }
+    </style>
+</head>
+<body>
+<h2 alight="center">Displaying Dynamic MongoDB content!</h2>
+<table>
+    <thead>
+        <tr>
+            <th>P1</th>
+            <th>P2</th>
+            <th>P3</th>
+            <th>P4</th>
+            <th>P5</th>
+        </tr>
+    </thead>
+    <tbody>
+{{ range . }}
+<tr>
+    <td><a href="{{ .P1 }}">{{ .P1 }}</a></td>
+    <td><a href="{{ .P2 }}">{{ .P2 }}</a></td>
+    <td><a href="{{ .P3 }}">{{ .P3 }}</a></td>
+    <td><a href="{{ .P4 }}">{{ .P4 }}</a></td>
+    <td><a href="{{ .P5 }}">{{ .P5 }}</a></td>
+</tr>
+{{ end }}
+    </tbody>
+</table>
+
+</body>
+</html>
